@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trail.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @trail.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @trail.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @trail.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @trail.zip %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @trail.length %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @trail.level %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @trail.category %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @trail.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @trail.lon %>
+</p>
+
+<%= link_to 'Edit', edit_trail_path(@trail) %> |
+<%= link_to 'Back', trails_path %>

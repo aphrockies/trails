@@ -1,0 +1,45 @@
+<h1>Listing trails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Length</th>
+      <th>Level</th>
+      <th>Category</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trails.each do |trail| %>
+      <tr>
+        <td><%= trail.name %></td>
+        <td><%= trail.address %></td>
+        <td><%= trail.city %></td>
+        <td><%= trail.state %></td>
+        <td><%= trail.zip %></td>
+        <td><%= trail.length %></td>
+        <td><%= trail.level %></td>
+        <td><%= trail.category %></td>
+        <td><%= trail.lat %></td>
+        <td><%= trail.lon %></td>
+        <td><%= link_to 'Show', trail %></td>
+        <td><%= link_to 'Edit', edit_trail_path(trail) %></td>
+        <td><%= link_to 'Destroy', trail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trail', new_trail_path %>
